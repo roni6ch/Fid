@@ -1,0 +1,11 @@
+<h1>עסקים</h1>
+<div [ngClass]="'flexContainer'">
+  <div class="card flip-in-hor-bottom" *ngFor="let b of businessByCategory" (click)="navigateToOffers(b._id)">
+    <div class="header">
+      <div class="img-box">
+        <img [src]="b.photoUrl" />
+      </div>
+      <h1 class="title">{{b.name}}</h1>
+    </div>
+  </div>
+</div>

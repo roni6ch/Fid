@@ -1,0 +1,16 @@
+
+  כרטיסים שברשותי עם הנחות
+<div [ngClass]="'flexContainer'">
+  <mat-card *ngFor="let offer of allOffers.offers">
+    <a [href]="offer.link"><mat-card-content>{{offer.description}}</mat-card-content></a>
+  </mat-card>
+</div>
+
+<mat-divider></mat-divider>
+
+כרטיסים שאינם ברשותי ויש להם הנחות
+<div [ngClass]="'flexContainer'">
+  <mat-card *ngFor="let offer of allOffers.nonOffers">
+    <a [href]="offer.link"><mat-card-content>{{offer.description}}</mat-card-content></a>
+  </mat-card>
+</div>

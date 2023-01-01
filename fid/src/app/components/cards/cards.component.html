@@ -1,0 +1,14 @@
+<h1>כרטיסים ברשותי</h1>
+
+<app-card [cards]="userCards" [userCardsIds]="userCardsIds" (onChildSelectCard)="onSelectCard($event)"></app-card>
+
+<mat-divider></mat-divider>
+
+<h2>bankCards</h2>
+
+<app-card [cards]="bankCards" [userCardsIds]="userCardsIds" (onChildSelectCard)="onSelectCard($event)"></app-card>
+
+<mat-divider></mat-divider>
+
+<h2>creditCards</h2>
+<app-card [cards]="creditCards" [userCardsIds]="userCardsIds" (onChildSelectCard)="onSelectCard($event)"></app-card>

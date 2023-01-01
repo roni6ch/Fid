@@ -1,0 +1,11 @@
+<h1>קטגוריות</h1>
+<div [ngClass]="'flexContainer'">
+    <div class="card flip-in-hor-bottom" *ngFor="let category of categories" [routerLink]="['/business', category._id]" preserveQueryParams="true">
+      <div class="header">
+        <div class="img-box">
+          <img [src]="category.photoUrl" />
+        </div>
+        <h1 class="title">{{category.name}}</h1>
+      </div>
+  </div>
+</div>

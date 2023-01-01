@@ -1,0 +1,14 @@
+<div id="header" *ngIf="!isHomePage()">
+  <nav>
+    <ul>
+      <li routerLink="/home"><span>בית</span></li>
+      <li routerLink="/categories"><span>קטגוריות</span></li>
+      <li routerLink="/cards"><span>כרטיסים</span></li>
+      <li routerLink="/login"><span>Login</span></li>
+    </ul>
+  </nav>
+  <app-search></app-search>
+</div>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

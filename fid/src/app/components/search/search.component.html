@@ -1,0 +1,15 @@
+<form class="example-form">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>חפש...</mat-label>
+    <input type="text" aria-label="חפש..." matInput [formControl]="searchForm"
+      [matAutocomplete]="auto" >
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" panelWidth="30vw" (optionSelected)='goToOffer($event.option.value)'>
+      <mat-option *ngFor="let b of business" [value]="b.name">
+        <div class="search-option">
+          <img [src]="b.photoUrl" height="25" />
+          <mat-label> {{b.name}}</mat-label>
+        </div>
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>

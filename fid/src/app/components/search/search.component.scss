@@ -1,0 +1,15 @@
+::ng-deep .mat-mdc-form-field{
+  width: 30vw;
+}
+::ng-deep .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input{
+  color: #fff;
+}
+mat-option img{
+  height: 45px;
+}
+.search-option{
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}

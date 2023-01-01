@@ -1,0 +1,17 @@
+<div class="container">
+  <mat-card class="item">
+    <mat-card-header>
+      <mat-card-title>Login</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <asl-google-signin-button *ngIf="!loggedIn" type='standard' size='large' text="signin_with" theme="outline"
+        shape="rectangular" logo_alignment="left"></asl-google-signin-button>
+    </mat-card-content>
+
+    <mat-card-content>
+      <div class="fb-login-button" (click)="loginWithFacebook()" data-width="" data-size="large"
+        data-button-type="continue_with" data-layout="default" data-auto-logout-link="false"
+        data-use-continue-as="true"></div>
+    </mat-card-content>
+  </mat-card>
+</div>

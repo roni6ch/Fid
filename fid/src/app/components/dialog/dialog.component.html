@@ -1,0 +1,29 @@
+<mat-dialog-content class="mat-typography">
+  <div *ngIf="data.dialogType === 'offers'">
+    כרטיסים שברשותי עם הנחות
+    <div [ngClass]="'flexContainer'">
+      <mat-card *ngFor="let offer of allOffers.offers">
+        <a [href]="offer.link"><mat-card-content>{{offer.description}}</mat-card-content></a>
+      </mat-card>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    כרטיסים שאינם ברשותי ויש להם הנחות
+    <div [ngClass]="'flexContainer'">
+      <mat-card *ngFor="let offer of allOffers.nonOffers">
+        <a [href]="offer.link"><mat-card-content>{{offer.description}}</mat-card-content></a>
+      </mat-card>
+    </div>
+  </div>
+
+  <div [ngClass]="'flexContainer'"  *ngIf="data.dialogType === 'categories'">
+    <div *ngFor="let category of categories" [routerLink]="['/business', category._id]" preserveQueryParams="true">
+      <mat-card class="item">
+        <mat-card-title>{{category.name}}</mat-card-title>
+        <img [src]="category.photoUrl" />
+      </mat-card>
+    </div>
+  </div>
+
+</mat-dialog-content>

@@ -1,0 +1,25 @@
+<div id="wrapper" [ngClass]="{'loader': isLoading}">
+  <header id="header">
+    <div class="logo">
+      <mat-icon aria-hidden="false" aria-label="diamond" fontIcon="diamond"></mat-icon>
+    </div>
+    <div class="content">
+      <div class="inner">
+        <h1>Fid</h1>
+        <p>Save your Time & Money</p>
+        <app-search></app-search>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li routerLink="/categories"><span>קטגוריות</span></li>
+        <li routerLink="/cards"><span>כרטיסים</span></li>
+        <li routerLink="/login"><span>Login</span></li>
+        <li (click)="signOut()"><span>Logout</span></li>
+      </ul>
+    </nav>
+  </header>
+  <footer id="footer">
+    <p class="admin" routerLink="/admin">Admin</p>
+  </footer>
+</div>
