@@ -10,11 +10,11 @@ import { AllOffers } from '../types/Offer';
 })
 export class ApiService {
 
-  private remoteUrl = 'http://localhost:3000/api';
-  private cardsUrl = `${this.remoteUrl}/cards`;
-  private categoriesUrl = `${this.remoteUrl}/categories`;
-  private businessUrl = `${this.remoteUrl}/business`;
-  private offersUrl = `${this.remoteUrl}/offers`;
+  api = location.hostname.includes('localhost') ? "http://localhost:3000/api" : "https://fid.onrender.com/api";
+  private cardsUrl = `${this.api}/cards`;
+  private categoriesUrl = `${this.api}/categories`;
+  private businessUrl = `${this.api}/business`;
+  private offersUrl = `${this.api}/offers`;
 
   cards = new BehaviorSubject<Card[]>([]);
   cards$ = this.cards.asObservable();

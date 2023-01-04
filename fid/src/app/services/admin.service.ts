@@ -9,11 +9,11 @@ import { Offer } from '../types/Offer';
   providedIn: 'root'
 })
 export class AdminService {
-
-  private cardsUrl = "http://localhost:3000/admin/card";
-  private categoryUrl = "http://localhost:3000/admin/category";
-  private businessUrl = "http://localhost:3000/admin/business";
-  private offerUrl = "http://localhost:3000/admin/offer";
+  api = location.hostname.includes('localhost') ? "http://localhost:3000" : "https://fid.onrender.com";
+  private cardsUrl = `${this.api}/admin/card`;
+  private categoryUrl = `${this.api}/admin/category`;
+  private businessUrl = `${this.api}/admin/business`;
+  private offerUrl = `${this.api}/admin/offerUrl`;
 
   constructor(private http: HttpClient) { }
 

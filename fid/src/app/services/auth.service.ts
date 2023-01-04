@@ -10,7 +10,8 @@ import { BehaviorSubject, firstValueFrom, Observable } from 'rxjs';
 export class AuthService {
 
   isLoginSubject = new BehaviorSubject<boolean>(this.hasToken());
-  private authUrl = "http://localhost:3000/api/login";
+  api = location.hostname.includes('localhost') ? "http://localhost:3000/api" : "https://fid.onrender.com/api";
+  private authUrl = `${this.api}/login`;
 
   constructor(private http: HttpClient,
     private _router: Router) {
